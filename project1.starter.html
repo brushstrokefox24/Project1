@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>JMM Drag and Drop</title>
+<!--
+	Example for DIG4104c
+    Based on W3C example at
+    http://www.w3schools.com/html/html5_draganddrop.asp
+    M. Moshell - December 2012
+-->
+
+<style type="text/css">
+#div1, #div2
+{float:left; width:100px; height:100px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+#div3
+{float:left; width:100px; height:100px; margin:10px;padding:10px;border:3px solid #aaaaaa;}
+</style>
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text"); //data is id of planet
+var f=document.getElementById(data); // f is object of the planet
+ev.target.appendChild(f);
+
+var what=ev.target.textContent;
+
+document.getElementById("div4").innerHTML="Image arrived at "+what;  
+
+}
+
+</script>
+
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="earth.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="88">Place 1</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" >Place 2
+
+</div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">Place 3</div>
+<div id="div4"></div>
+
+
+</body>
+</html>
+

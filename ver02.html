@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Ashley Pajak</title>
+<!--
+	Example for DIG4104c
+    Based on W3C example at
+    http://www.w3schools.com/html/html5_draganddrop.asp
+    M. Moshell - December 2012
+-->
+
+<style type="text/css">
+#div1, #div2, #div3, #choice, #coupon{
+	float:left; 
+	width:150px;
+	min-height:100px; 
+	max-height:auto;
+	margin:10px;
+	padding:10px;
+	border:1px solid #aaaaaa;
+
+}
+#coupons{
+	float:left;
+	width:auto;
+	margin:auto;
+}
+#selection{
+	float:right;
+	width:auto;
+	margin:auto;
+}
+img{
+	margin:auto;
+	display:block;
+}
+#choicesel{
+	font-weight:bold;
+	color:red;
+}
+</style>
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text"); //data is id of planet
+var f=document.getElementById(data); // f is object of the planet
+ev.target.appendChild(f);
+
+var what=ev.target.textContent;
+var whatname=ev.dataTransfer.getData("Text");
+document.getElementById("choice").innerHTML="The Plan and Coupon you selected is the <br><span id='choicesel'>"+what+"</span> with a <span id='choicesel'>"+data+"</span><br>";  
+
+}
+
+</script>
+
+</script>
+</head>
+<body>
+<div id="coupons" ondrop="drop(event)" ondragover="allowDrop(event)" >
+	<img src="http://placekitten.com/80/80" draggable="true" ondragstart="drag(event)" id="coupon1" width="88" height="88"><br>
+	<img src="http://placekitten.com/g/80/80" draggable="true" ondragstart="drag(event)" id="coupon2" width="99" height="99"><br>
+	<img src="http://placekitten.com/80/80" draggable="true" ondragstart="drag(event)" id="coupon3" width="77" height="77">
+</div>	
+<div id="selection">	
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	  Starving Student Plan<br></div>
+	  <div style="clear: both;">
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">Professionals Plan
+	<br></div>
+	<div style="clear: both;">
+	<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">Attorney Plan<br></div>
+	<div style="clear: both;">
+	<div id="choice">Savings Selected<br></div>
+</div>
+
+</body>
+</html>
+

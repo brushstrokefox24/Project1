@@ -1,0 +1,97 @@
+body{
+	background:black;
+	color:white;
+	font-size:11px;
+
+}
+nav{
+	background:#4C4646;
+	margin:0 5px 10px 5px;
+	padding:10px 10px;
+
+}
+
+nav a{
+	padding:5px;
+	text-decoration:none;
+	color:white;
+	font-size:20px;
+}
+nav a:hover{
+	padding:5px;
+	text-decoration:none;
+	color:white;
+	font-size:20px;
+	border:2px dotted red;
+}
+.couponimg{
+	border: 3px solid maroon;
+	margin: 10px auto;
+	display:inline-block;
+}
+.red{
+	color:red;
+}
+h1{
+	color:red;
+	font-size:15px;
+}h2{
+	font-size:13px;
+}
+
+#div1, #div2, #div3, #choice{
+	padding:10px;
+	border:1px solid #aaaaaa;
+	text-align:center;
+
+}#div1{
+	margin-top:0;
+
+}#membership1, #membership2, #membership3{
+	border:1px dotted white;
+	min-height:120px;
+	height:auto;
+	width:auto;
+	min-width:220px;
+	padding:5px;
+	display:block;
+	margin:auto;
+
+}
+#coupons, #selection{
+	text-align:center;
+	width:auto;
+	margin:auto;	
+}
+#coupons{
+	min-height:150px;
+	height:auto;
+}
+#buyout{
+	border:1px solid #aaaaaa;
+	margin:10px auto;
+	padding:20px;
+}
+img{
+	margin: 5px auto;
+	display:block;
+}
+#logo{
+	margin: 5px auto;
+	display:block;
+}
+#choicesel{
+	font-weight:bold;
+	color:red;
+}
+#clear{
+clear: both;
+}
+
+#buynow{
+	padding:10px;
+	text-align:center;
+	background:#4C4646;
+	border:2px dotted white;
+	font-size:20px;
+}
