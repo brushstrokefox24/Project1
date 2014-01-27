@@ -62,19 +62,6 @@ function drop(ev)
 	
 
 }
-function dropback(ev)
-{
-	ev.preventDefault();
-	var data=ev.dataTransfer.getData("Text"); //data is id of planet
-	var f=document.getElementById(data); // f is object of the planet
-	ev.target.appendChild(f);
-	document.getElementById("coupon").innerHTML=document.getElementById("coupon").innerHTML+f;
-	var element = document.getElementById("choice");
-        while (element.firstChild) {
-          element.removeChild(element.firstChild);
-        }
-}
-
 function clearpage(ev){
 	if(window.checkfor==true){
 	document.getElementById("visible").remove();
@@ -87,3 +74,8 @@ function clearpage(ev){
 
 }
 
+function reset(){
+
+window.selectedx-false;
+location.reload();
+}

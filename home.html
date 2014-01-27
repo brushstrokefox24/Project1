@@ -18,46 +18,19 @@
 				<div class="row clear">
 					<div class="twelvecol last">
 					<nav>
-						<div class="row">
-							<div class="twocol navopt">
-								<a href="#">Home</a>
-							</div>
-							<div class="twocol navopt">
-								<a href="#">About Us</a>
-							</div>
-							<div class="twocol navopt">
-								<a href="#">Rules</a>
-							</div>
-							<div class="twocol navopt">
-								<a href="#">Verification</a>
-							</div>
-							<div class="twocol navopt">
-								<a href="home.html"><span class="red">Apply</span></a>
-							</div>
-							<div class="twocol navopt last">
-								<a href="#">Contact Us</a>
-							</div>
-						</div>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Rules</a></li>
+							<li><a href="#">Verification</a></li>
+							<li><a href="home.html"><span class="red">Apply</span></a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
 					</nav>
 					</div>
 				</div>
 				<br>
 				<div id="visible">
-					<div id="coupons" ondrop="drop(event)" ondragover="allowDrop(event)" >
-						<div class="row clear">
-							<div class="fourcol">
-								<img src="img/coupon1.jpg" draggable="true" ondragstart="drag(event)" class="couponimg" id="$5" alt="This Five Dollar Coupon is good for three months of service.">
-							</div>
-							<div class="fourcol">
-								<img src="img/coupon2.jpg" draggable="true" ondragstart="drag(event)" class="couponimg" id="$10" alt="This Ten Dollar Coupon is good for six months of service.">
-							</div>
-							<div class="fourcol last">
-								<img src="img/coupon3.jpg" draggable="true" ondragstart="drag(event)" class="couponimg" id="$20" alt="This Twenty Five Dollar Coupon is good for a year of service.">
-							</div>
-						</div>
-					</div>
-					<br>
-					<br>
 					<div id="selection">
 						<div class="row clear">		
 							<div class="fourcol">
@@ -66,7 +39,7 @@
 									<h2>Type A blood - starving College students</h2>
 									<p><span class="red">$19.00 a month</span><p>
 									<div id="membership1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
-									<div class ="buynow" onclick="clearpage(event)">
+									<div class ="buynow" id="plan1" onclick="clearpage(event)">
 									Buy Today!</div>
 								</div>
 							</div>
@@ -76,7 +49,7 @@
 									<h2>All blood types from healthy professionals</h2>
 									<p><span class="red">$39.00 a month</span></p>
 									<div id="membership2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-									<div class ="buynow" onclick="clearpage(event)">
+									<div class ="buynow" id="plan2" onclick="clearpage(event)">
 									Buy Today!</div>
 								</div>
 							</div>
@@ -87,13 +60,33 @@
 									<p><span class="red">FREE</span></p>
 									
 									<div id="membership3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-									<div class ="buynow" onclick="clearpage(event)">
+									<div class ="buynow" id="plan3" onclick="clearpage(event)">
 									Buy Today!
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<br>
+					<div id="coupons" >
+						<div class="row clear">
+							<div class="threecol">
+								<img src="img/coupon1.jpg" draggable="true" ondragstart="drag(event)" class="couponimg" id="$5" alt="This Five Dollar Coupon is good for three months of service.">
+							</div>
+							<div class="threecol">
+								<img src="img/coupon2.jpg" draggable="true" ondragstart="drag(event)" class="couponimg" id="$10" alt="This Ten Dollar Coupon is good for six months of service.">
+							</div>
+							<div class="threecol">
+								<img src="img/coupon3.jpg" draggable="true" ondragstart="drag(event)" class="couponimg" id="$20" alt="This Twenty Five Dollar Coupon is good for a year of service.">
+							</div>
+							
+							<div class="threecol last">
+								<div class ="buynow" onclick="reset(event)">Reset</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					
 				</div>
 				<br>
 				<div class="row">
